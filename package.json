@@ -1,0 +1,59 @@
+{
+  "name": "ui-lib-future",
+  "version": "0.0.0",
+  "description": "",
+  "author": {
+    "name": "Nik Graf",
+    "email": "nik@nikgraf.com",
+    "url": "https://github.com/nikgraf"
+  },
+  "repository": {
+    "type": "git",
+    "url": "TODO"
+  },
+  "main": "lib/index.js",
+  "keywords": [
+    "react"
+  ],
+  "peerDependencies": {
+    "react": ">=0.14.0",
+    "react-dom": ">=0.14.0"
+  },
+  "scripts": {
+    "prepublish": "npm run build",
+    "lint": "npm run lint:eslint && npm run lint:jscs",
+    "lint:eslint": "eslint ./",
+    "lint:jscs": "jscs ./"
+  },
+  "devDependencies": {
+    "babel": "^6.3.26",
+    "babel-cli": "^6.4.5",
+    "babel-core": "^6.4.5",
+    "babel-eslint": "^5.0.0-beta6",
+    "babel-jest": "^6.0.1",
+    "babel-loader": "^6.2.1",
+    "babel-plugin-react-transform": "^2.0.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-react-hmre": "^1.0.1",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^3.1.0",
+    "eslint-plugin-react": "^3.15.0",
+    "jest-cli": "^0.8.2",
+    "jscs": "^2.8.0",
+    "react-transform-catch-errors": "^1.0.1",
+    "react-transform-hmr": "^1.0.1",
+    "redbox-react": "^1.2.0",
+    "webpack": "^1.12.11",
+    "webpack-dev-middleware": "^1.5.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.6.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-stage-0": "^6.3.13",
+    "immutable": "^3.7.6",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6"
+  }
+}
