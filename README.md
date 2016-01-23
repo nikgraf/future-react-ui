@@ -64,7 +64,7 @@ In this version the defaultTheme is attached to the component itself as static p
 
 https://github.com/nikgraf/future-react-ui/blob/master/ui-lib/Context/Hint.js
 
-In this version we leverage context to build a `<Theme />` component that takes a theme as property and passes it down to all child components via React's context. A theme is still a simple JS object as can be seen on line 25-30. (https://github.com/nikgraf/future-react-ui/blob/master/app/index.js#L22). See how it's used here: https://github.com/nikgraf/future-react-ui/blob/master/app/index.js#L94. On one hand this approach is powerful, because you can apply different themes various nesting levels in the render tree.
+In this version we leverage context to build a `<Theme />` component that takes a theme as property and passes it down to all child components via React's context. A theme is still a simple JS object as can be seen on line 25-30. (https://github.com/nikgraf/future-react-ui/blob/master/app/index.js#L22). See how it's used here: https://github.com/nikgraf/future-react-ui/blob/master/app/index.js#L56. On one hand this approach is powerful, because you can apply different themes various nesting levels in the render tree.
 
 ```
 <Theme theme={baseTheme}>

@@ -31,42 +31,6 @@ const theme = {
 
 window.React = React;
 
-var Button = React.createClass({
-  contextTypes: {
-    color: React.PropTypes.string,
-  },
-  render: function() {
-    return (
-      <button style={{background: this.context.color}}>
-        {this.props.children}
-      </button>
-    );
-  },
-});
-
-var Message = React.createClass({
-  render: function() {
-    return (
-      <div>
-        {this.props.text} <Button>Delete</Button>
-      </div>
-    );
-  },
-});
-
-var MessageList = React.createClass({
-  childContextTypes: {
-    color: React.PropTypes.string,
-  },
-  getChildContext: function() {
-    return {color: "purple"};
-  },
-
-  render: function() {
-    return <div>{this.props.children}</div>;
-  },
-});
-
 const App = () => {
   return (
     <div style={{ width: 600, margin: '0 auto' }}>
@@ -90,12 +54,10 @@ const App = () => {
 
 
       <h3>Global theme as Theme component leveraging context</h3>
-      <MessageList>
       <Theme theme={theme}>
         <Hint3>Basic closed hint without styling.</Hint3>
         <Hint3 isOpen>Basic open hint without styling.</Hint3>
       </Theme>
-      </MessageList>
 
     </div>
   );
