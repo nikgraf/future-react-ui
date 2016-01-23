@@ -38,7 +38,7 @@ import Toggle from 'ui-lib/Toggle';
 
 #### Ship without a theme
 
-Ship without a global theme (so people don't have to import the styling code).
+Ship without a global theme so people don't have to import the styling code. This might not be relevant to company internal or in general libraries that a opinionated about styling.
 
 #### Global theming utility
 
