@@ -77,7 +77,7 @@ In this version we leverage context to build a `<Theme />` component that takes 
 
 There is one obvious concern with this approach. There could be name-clashing between libraries that use the same key in the `theme` object. This could be solved by following a namespace convention like prefixing the keys with the npm package name.
 
-## Conclusion
+## Temporary Conclusion
 
 While the Theme component based idea is pretty powerful it's issues make me not having this as a default way of doing things. I'm not sure if there are some up/downsides between Module export vs Static property, but currently I'm leaning more to the static property implementation. If you have some ideas/feedback please reach out to me and let's discuss. (Github Issues might be best, but Twitter, Email, Skype, Hangout works as well)
 
