@@ -15,15 +15,6 @@ npm start
 
 ## Basic Ideas
 
-#### Class based
-
-Component styles should be class based. It's more performant & responsive styling doesn't work with server-side rendering. I myself went down the inline-styles path in the past, but switched back to classes. Your thoughts?
-
-#### react-themeable
-
-Leverage react-themeable. It's a nice way of providing many styling classes to a single component.
-I believe establishing this as a convention would benefit the React community due the consistent API over many libs.
-
 #### Self-contained
 
 Make components self contained (no global UI lib dependencies) so you can import them and avoid importing the whole library e.g.
@@ -35,6 +26,15 @@ import { Toggle } from 'ui-lib';
 // just import toggle without importing the whole library
 import Toggle from 'ui-lib/Toggle';
 ```
+
+#### react-themeable
+
+Leverage react-themeable. It's a nice way of providing many styling classes to a single component.
+I believe establishing this as a convention would benefit the React community due the consistent API over many libs.
+
+#### ClassName based
+
+Component styles should be class based. It's more performant & responsive styling doesn't work with server-side rendering. I myself went down the inline-styles path in the past, but switched back to classes. A component using react-themeable could actually work with both (class-names & inline-styles), but I believe this is an unnecessary overhead. Your thoughts?
 
 #### Ship without a theme
 
