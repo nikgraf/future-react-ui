@@ -70,6 +70,7 @@ For example these UI
 
 #### Not themed kits & components
 
+- material-ui-core (unstyled kit)
 - belle-core (unstyled kit)
 - elemental-core (unstyled kit)
 - react-toolbox-core (unstyled kit)
@@ -79,6 +80,7 @@ For example these UI
 
 #### Themed UI kits
 
+- material-ui (themed with material ui style and based on material-ui-core)
 - belle (themed with belle style and based on belle-core)
 - belle-flat (themed with a flat theme and based on belle-core)
 - elemental (themed with the elemental theme and based on elemental-core)
