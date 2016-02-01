@@ -107,7 +107,7 @@ export default (props) => {
 };
 ```
 
-### Factory Pattern
+### Other Global Theming Patterns
 
 other patterns can be found here: https://github.com/nikgraf/future-react-ui/blob/master/global-theming.md
 
