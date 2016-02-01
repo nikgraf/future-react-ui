@@ -77,9 +77,70 @@ In this version we leverage context to build a `<Theme />` component that takes 
 
 There is one obvious concern with this approach. There could be name-clashing between libraries that use the same key in the `theme` object. This could be solved by following a namespace convention like prefixing the keys with the npm package name.
 
+#### Factory Pattern
+
+https://github.com/nikgraf/future-react-ui/tree/master/ui-lib/Factory
+
+In this version we assume there is a package which includes a completely unstyled version of the UI kits while there is a second one which takes all the needed components and return themed components buy leveraging a factory function.
+
+```
+/**
+ * Returns a the provided component as themed component.
+ *
+ * Note: defaultProps could be useful for default special behavioural in
+ * different ui libraries.
+ */
+export default (Component, theme, defaultProps) => (props) => {
+  return <Component {...defaultProps} theme={theme} {...props} />;
+};
+```
+
+For example these UI
+
+##### Not styled components
+
+- belle-core (unstyled kit)
+- elemental-core (unstyled kit)
+- react-toolbox-core (unstyled kit)
+- react-select (unstyled component)
+- react-autocomplete (unstyled component)
+- react-modal (unstyled component)
+
+##### Themed
+
+- belle (themed with belle style and based on belle-core)
+- belle-flat (themed with a flat theme and based on belle-core)
+- elemental (themed with the elemental theme and based on elemental-core)
+- react-toolbox (themed with the material theme and based on react-toolbox-core)
+- your-product-ui-lib (themed with your company style and based on belle-core[Toggle, Rating] & react-select & react-modal)
+- your-friends-product-ui-lib (themed with their company style and based on react-select & react-modal & react-autocomplete)
+
+Usage:
+```
+import Hint from 'elemental/Hint';
+
+const customTheme = {
+  questionMark: 'custom-class-for-question-mark-gold',
+  visibleContent: 'custom-class-visible-content',
+};
+
+export default (props) => {
+  return (
+    <div>
+      {/* Globally theme component */}
+      <Hint />
+      {/* Overwriting the theme locally for this case */}
+      <Hint theme={theme}/>
+    </div>
+  );
+};
+```
+
 ## Temporary Conclusion
 
-While the Theme component based idea is pretty powerful it's issues make me not having this as a default way of doing things. I'm not sure if there are some up/downsides between Module export vs Static property, but currently I'm leaning more to the static property implementation. If you have some ideas/feedback please reach out to me and let's discuss. (Github Issues might be best, but Twitter, Email, Skype, Hangout works as well)
+While the Theme component based idea is pretty powerful the issues make me not like it as a default. For some time I was convinced that Module export or Static property would be one of the winners. Right now I'm pretty convinced the Factory Pattern is the clear winner. It is super flexible and allows people to create their own company UI kits. They can easily provide their own styling as well as set other props as default suited to their needs. Another benefit is that you can easily get started with prototyping by using an already style version (e.g. belle-flat) and replace it later with your custom product style.
+
+If you have some ideas/feedback please reach out to me and let's discuss. (Github Issues might be best, but Twitter, Email, Skype, Hangout works as well)
 
 ## License
 
