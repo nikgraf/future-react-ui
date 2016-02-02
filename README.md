@@ -3,6 +3,7 @@
 My goal is to find an architecture which could be common ground a base for quality React UI libraries. A consistent theming/styling API would make the lives of many developers way more comfortable.
 
 HELP/FEEDBACK/YOUR OPINION WANTED! :)
+Feel free to join the ongoing discussion [here](https://github.com/nikgraf/future-react-ui/issues/1) or open up a new issue.
 
 ## How to setup & run
 
